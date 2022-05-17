@@ -28,7 +28,7 @@ class Article
     #[ORM\Column(type: 'string', length: 255)]
     private $urlPath;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'text',nullable:false)]
     private $sumUp;
 
     #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'articles')]
