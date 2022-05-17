@@ -8,6 +8,15 @@
 	{{ article.header }}
 {% endblock %}
 
+{% block meta %}
+	<meta name="description" content="{{ article.sumUp }}">
+	<meta name="author" content="durandal">
+<meta name="url" content="https://tp-s6-web-2022-1182.herokuapp.com/{{ article.category.entitled }}/{{ article.urlPath }}_{{ article.id }}.html">
+	<meta name="copyright" content="durandal">
+	<meta name="robots" content="index,follow">
+{% endblock %}
+
+
 
 
 
@@ -71,8 +80,7 @@
 		<!-- Post Image Start -->
 		<div class="post-image margin-top-40 margin-bottom-40">
 
-			<img src="{{ asset('build/images/pattern-bg.3c10a35f.png') }}" alt="premiere image">
-
+		<img src="{{ asset('build2/images/ours-glacier-fonte-rechauffement-climatique.jpg') }}" alt="ours-sur-un-glacier-en-fonte-rechauffement-climatique.jpg">
 
 			<p>Aidez nous à sauver notre chère planète.</p>
 		</div>
