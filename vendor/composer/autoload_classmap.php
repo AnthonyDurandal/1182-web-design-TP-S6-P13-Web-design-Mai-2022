@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\FirstController' => $baseDir . '/src/Controller/FirstController.php',
+    'App\\Controller\\LoginController' => $baseDir . '/src/Controller/LoginController.php',
+    'App\\Controller\\SimpleUserController' => $baseDir . '/src/Controller/SimpleUserController.php',
     'App\\DataFixtures\\AppFixtures' => $baseDir . '/src/DataFixtures/AppFixtures.php',
     'App\\Entity\\Article' => $baseDir . '/src/Entity/Article.php',
     'App\\Entity\\Category' => $baseDir . '/src/Entity/Category.php',
@@ -5318,6 +5320,7 @@ return array(
     'Twig\\Extension\\SandboxExtension' => $vendorDir . '/twig/twig/src/Extension/SandboxExtension.php',
     'Twig\\Extension\\StagingExtension' => $vendorDir . '/twig/twig/src/Extension/StagingExtension.php',
     'Twig\\Extension\\StringLoaderExtension' => $vendorDir . '/twig/twig/src/Extension/StringLoaderExtension.php',
+    'Twig\\Extra\\Intl\\IntlExtension' => $vendorDir . '/twig/intl-extra/IntlExtension.php',
     'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Compiler\\MissingExtensionSuggestorPass' => $vendorDir . '/twig/extra-bundle/DependencyInjection/Compiler/MissingExtensionSuggestorPass.php',
     'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Configuration' => $vendorDir . '/twig/extra-bundle/DependencyInjection/Configuration.php',
     'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\TwigExtraExtension' => $vendorDir . '/twig/extra-bundle/DependencyInjection/TwigExtraExtension.php',
