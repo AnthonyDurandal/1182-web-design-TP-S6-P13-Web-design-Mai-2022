@@ -695,3 +695,4 @@
 [2022-05-17T13:39:01.234607+03:00] doctrine.INFO: Disconnecting [] []
 [2022-05-17T13:43:01.194826+03:00] console.DEBUG: Command "make:auth" exited with code "1" {"command":"make:auth","code":1} []
 [2022-05-17T13:44:03.292497+03:00] php.DEBUG: User Notice: Install the curl extension or run "composer require amphp/http-client" to perform async HTTP operations, including full HTTP/2 support {"exception":{"Symfony\\Component\\ErrorHandler\\Exception\\SilencedErrorContext":{"severity":1024,"file":"/home/durandal/Documents/GitHub/web-design-2/vendor/symfony/http-client/HttpClient.php","line":64,"trace":[{"file":"/home/durandal/Documents/GitHub/web-design-2/var/cache/de_/ContainerWYf5i8o/App_KernelDevDebugContainer.php","line":1069,"function":"create","class":"Symfony\\Component\\HttpClient\\HttpClient","type":"::"}],"count":1}}} []
+[2022-05-17T13:44:30.704084+03:00] console.DEBUG: Command "make:auth" exited with code "1" {"command":"make:auth","code":1} []
