@@ -24,7 +24,7 @@ final class Version20220517102033 extends AbstractMigration
         $this->addSql('CREATE SEQUENCE category_id_seq INCREMENT BY 1 MINVALUE 1 START 1');
         $this->addSql('CREATE SEQUENCE "user_id_seq" INCREMENT BY 1 MINVALUE 1 START 1');
         $this->addSql('CREATE TABLE article (id INT NOT NULL, category_id INT NOT NULL, header VARCHAR(255) NOT NULL, title VARCHAR(255) NOT NULL, created_at TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL, content TEXT NOT NULL, url_path VARCHAR(255) NOT NULL, sum_up VARCHAR(255) NOT NULL, PRIMARY KEY(id))');
-        $this->addSql('CREATE INDEX IDX_23A0E6612469DE2 ON article (category_id)');
+        $this->addSql('CREATE INDEurl_pathX IDX_23A0E6612469DE2 ON article (category_id)');
         $this->addSql('COMMENT ON COLUMN article.created_at IS \'(DC2Type:datetime_immutable)\'');
         $this->addSql('CREATE TABLE category (id INT NOT NULL, entitled VARCHAR(255) NOT NULL, PRIMARY KEY(id))');
         $this->addSql('CREATE TABLE "user" (id INT NOT NULL, email VARCHAR(180) NOT NULL, roles JSON NOT NULL, password VARCHAR(255) NOT NULL, PRIMARY KEY(id))');
