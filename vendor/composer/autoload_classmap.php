@@ -11,6 +11,7 @@ return array(
     'App\\Entity\\Article' => $baseDir . '/src/Entity/Article.php',
     'App\\Entity\\Category' => $baseDir . '/src/Entity/Category.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\Helper\\UrlHelper' => $baseDir . '/src/Helper/UrlHelper.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\ArticleRepository' => $baseDir . '/src/Repository/ArticleRepository.php',
     'App\\Repository\\CategoryRepository' => $baseDir . '/src/Repository/CategoryRepository.php',

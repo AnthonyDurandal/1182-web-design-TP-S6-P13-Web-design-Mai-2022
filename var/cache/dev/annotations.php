@@ -90,6 +90,10 @@ return [[
 '[C]App%5CEntity%5CArticle%23getCategory' => 1,
 'App%5CEntity%5CArticle%23setCategory' => 0,
 '[C]App%5CEntity%5CArticle%23setCategory' => 1,
+'App%5CEntity%5CArticle%23getAuthorName' => 0,
+'[C]App%5CEntity%5CArticle%23getAuthorName' => 1,
+'App%5CEntity%5CArticle%23setAuthorName' => 0,
+'[C]App%5CEntity%5CArticle%23setAuthorName' => 1,
 'App%5CEntity%5CArticle%24id' => 0,
 '[C]App%5CEntity%5CArticle%24id' => 1,
 'App%5CEntity%5CArticle%24header' => 0,
@@ -106,6 +110,8 @@ return [[
 '[C]App%5CEntity%5CArticle%24sumUp' => 1,
 'App%5CEntity%5CArticle%24category' => 0,
 '[C]App%5CEntity%5CArticle%24category' => 1,
+'App%5CEntity%5CArticle%24authorName' => 0,
+'[C]App%5CEntity%5CArticle%24authorName' => 1,
 'App%5CEntity%5CCategory' => 0,
 '[C]App%5CEntity%5CCategory' => 1,
 'App%5CEntity%5CCategory%23__construct' => 0,
@@ -850,6 +856,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1652783216,
+1 => 1652784243,
 
 ]];
