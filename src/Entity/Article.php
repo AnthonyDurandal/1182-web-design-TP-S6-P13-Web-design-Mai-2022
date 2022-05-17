@@ -35,6 +35,9 @@ class Article
     #[ORM\JoinColumn(nullable: false)]
     private $category;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $authorName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +123,18 @@ class Article
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getAuthorName(): ?string
+    {
+        return $this->authorName;
+    }
+
+    public function setAuthorName(string $authorName): self
+    {
+        $this->authorName = $authorName;
 
         return $this;
     }
