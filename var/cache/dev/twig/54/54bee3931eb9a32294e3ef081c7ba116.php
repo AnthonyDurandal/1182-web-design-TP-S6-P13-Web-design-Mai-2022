@@ -71,6 +71,6 @@ class __TwigTemplate_6146a27e768a4f830bffd7f6a9e241a3 extends Template
     public function getSourceContext()
     {
         return new Source("{% extends \"@email/zurb_2/notification/body.txt.twig\" %}
-", "@email/default/notification/body.txt.twig", "/home/durandal/Documents/GitHub/template/vendor/symfony/twig-bridge/Resources/views/Email/default/notification/body.txt.twig");
+", "@email/default/notification/body.txt.twig", "/home/durandal/Documents/GitHub/web-design-2/vendor/symfony/twig-bridge/Resources/views/Email/default/notification/body.txt.twig");
     }
 }

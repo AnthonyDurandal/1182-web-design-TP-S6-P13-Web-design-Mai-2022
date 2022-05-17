@@ -194,6 +194,6 @@ class __TwigTemplate_ea7244b10f8971fbdf96463a1827839c extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/durandal/Documents/GitHub/template/templates/base.html.twig");
+", "base.html.twig", "/home/durandal/Documents/GitHub/web-design-2/templates/base.html.twig");
     }
 }

@@ -557,6 +557,6 @@ class __TwigTemplate_67776858103ba941a0a25a379b5f7536 extends Template
         {% endif %}
     </div>
 {% endblock %}
-", "@WebProfiler/Collector/http_client.html.twig", "/home/durandal/Documents/GitHub/template/vendor/symfony/web-profiler-bundle/Resources/views/Collector/http_client.html.twig");
+", "@WebProfiler/Collector/http_client.html.twig", "/home/durandal/Documents/GitHub/web-design-2/vendor/symfony/web-profiler-bundle/Resources/views/Collector/http_client.html.twig");
     }
 }
