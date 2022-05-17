@@ -103,10 +103,10 @@ class ArticleRepository extends ServiceEntityRepository
    public function findOneByIdAndUrl(int $id,string $urlPath): ?Article
    {
        return $this->createQueryBuilder('a')
-           ->andWhere('a.url_path = :urlPath')
+           ->andWhere('a.urlPath = :urlPath')
            ->andWhere('a.id = :id')
            ->setParameter('id', $id)
-           ->setParameter('url_path', $urlPath)
+           ->setParameter('urlPath', $urlPath)
            ->orderBy('a.id', 'ASC')
            ->getQuery()
           ->getOneOrNullResult()

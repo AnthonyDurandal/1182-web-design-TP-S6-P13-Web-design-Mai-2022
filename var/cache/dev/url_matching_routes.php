@@ -13,10 +13,9 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/articles' => [[['_route' => 'app_base', '_controller' => 'App\\Controller\\FirstController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_base', '_controller' => 'App\\Controller\\FirstController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'liste_articles', '_controller' => 'App\\Controller\\SimpleUserController::liste_articles'], null, null, null, false, false, null]],
-        '/fiche' => [[['_route' => 'fiche_article', '_controller' => 'App\\Controller\\SimpleUserController::ficheArticle'], null, null, null, false, false, null]],
+        '/articles' => [[['_route' => 'liste_articles', '_controller' => 'App\\Controller\\SimpleUserController::liste_articles'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -35,6 +34,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/((?:[-_a-z0-9]*))/((?:[-a-z0-9]*))_((?:[0-9]*))\\.html(*:223)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -44,8 +44,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        223 => [
+            [['_route' => 'fiche_article', '_controller' => 'App\\Controller\\SimpleUserController::ficheArticle'], ['category', 'url', 'id'], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
