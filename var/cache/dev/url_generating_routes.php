@@ -17,6 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\Admin\\DashboardController::index'], [], [['text', '/admin']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\LoginController::logout'], [], [['text', '/logout']], [], [], []],
     'liste_articles' => [[], ['_controller' => 'App\\Controller\\SimpleUserController::liste_articles'], [], [['text', '/']], [], [], []],
     'fiche_article' => [['category', 'url', 'id'], ['_controller' => 'App\\Controller\\SimpleUserController::ficheArticle'], ['category' => '([-_a-z0-9]*)', 'url' => '([-a-z0-9]*)', 'id' => '([0-9]*)'], [['text', '.html'], ['variable', '_', '(?:[0-9]*)', 'id', true], ['variable', '/', '(?:[-a-z0-9]*)', 'url', true], ['variable', '/', '(?:[-_a-z0-9]*)', 'category', true]], [], [], []],
 ];
