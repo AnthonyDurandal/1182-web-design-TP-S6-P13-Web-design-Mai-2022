@@ -9,64 +9,73 @@
 {% endblock %}
 
 
+
+
 {% block body %}
-<div class="col-md-12 blog-post" style='display:block'>
-
-	<!-- Post Headline Start -->
-	<div class="post-title">
-		<h1>{{ article.header }}</h1>
-	</div>
-	<!-- Post Headline End -->
-
-
-	<!-- Post Detail Start -->
-	<div class="post-info">
-		<span>Article du
-			{{ article.createdAt |format_datetime(locale='en') }}
-			écrit par
-			{{ article.authorName }}</span>
-	</div>
-	<!-- Post Detail End -->
+<style>
+	.image-gallery {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		height: 100px;
+	}
+</style>
 
 
-	<p>{{ article.content | raw}}</p>
+	<div
+		class="col-md-12 blog-post" style='display:block'>
 
-
-	<!-- Post Image Start -->
-	<div class="post-image margin-top-40 margin-bottom-40">
-		<img src="images/blog/1.jpg" alt="">
-		<p>quelques images en aperçu</p>
-		<p></p>
-	</div>
-	<!-- Post Image End -->
-
-	<!-- Post Image Gallery Start -->
-	<div class="row margin-top-40 margin-bottom-40">
-
-		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="images/blog/7.jpg" class="image-popup" title="image Title">
-				<img src="images/blog/7.jpg" class="img-responsive" alt="">
-			</a>
+		<!-- Post Headline Start -->
+		<div class="post-title">
+			<h1>{{ article.header }}</h1>
 		</div>
+		<!-- Post Headline End -->
 
-		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="images/blog/5.jpg" class="image-popup" title="image Title">
-				<img src="images/blog/5.jpg" class="img-responsive" alt="">
-			</a>
+
+		<!-- Post Detail Start -->
+		<div class="post-info">
+			<span>Article du
+				{{ article.createdAt |format_datetime(locale='en') }}
+				écrit par
+				{{ article.authorName }}</span>
 		</div>
+		<!-- Post Detail End -->
 
-		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a href="images/blog/6.jpg" class="image-popup" title="image Title">
-				<img src="images/blog/6.jpg" class="img-responsive" alt="">
-			</a>
+
+		<p>{{ article.content | raw}}</p>
+
+
+		<!-- Post Image Start -->
+		<div class="post-image margin-top-40 margin-bottom-40">
+
+			<img src="{{ asset('build/images/pattern-bg.3c10a35f.png') }}" alt="premiere image">
+
+
+			<p>Aidez nous à sauver notre chère planète.</p>
+			<p></p>
 		</div>
+		<!-- Post Image End -->
 
-	</div>
-	<!-- Post Image Gallery End -->
+		<!-- Post Image Gallery Start -->
+		<div class="image-gallery">
+
+		
+			{# <div class=""> #}
+				<img src="{{ asset('build/images/template-imgs/ours-blanc-font-glacier-rechauffement-climatique.jpeg') }}" class="" alt="hausse-niveau-mer-rechauffement-climatique"/>
+			{# </div> #}
+
+			{# <div class=""> #}
+				<img src="{{ asset('build/images/template-imgs/cuit-rechauffement-climatique.png') }}" class="" alt="secheresse-rechauffement-climatique"/>
+			{# </div> #}
+
+			{# <div class=""> #}
+				<img src="{{ asset('build/images/template-imgs/canicule-rechauffement-climatique.jpg') }}" class="" alt="ours-polaire-fonte-glaciers"/>
+			{# </div> #}
+		</div>
+		<!-- Post Image Gallery End -->
 
 		<!-- You May Also Like Start -->
 		<div class="you-may-also-like margin-top-50 margin-bottom-50">
-			<h3>Ces articles peuvent aussi vous intéresser</h3>
+			<h3>Ces articles peuvent aussi vous intéresser </h3>
 			<div class="row" style='display:grid;grid-template-columns:1fr 1fr 1fr;grid-gap:20px'>
 
 				<div class="col-md-4 col-sm-6 col-xs-12">
@@ -94,8 +103,5 @@
 	</div>
 	<!-- Post Author Bio Box ends -->
 
-</div>
-
-{% endblock %}
-
+</div>{% endblock %}
 

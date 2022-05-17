@@ -21,7 +21,7 @@ class SimpleUserController extends AbstractController
         $this->articleRepository = $articleRepository;
     }
 
-    #[Route('/articles', name: 'liste_articles')]
+    #[Route('/', name: 'liste_articles')]
     public function liste_articles(Request $request): Response
     {
 
