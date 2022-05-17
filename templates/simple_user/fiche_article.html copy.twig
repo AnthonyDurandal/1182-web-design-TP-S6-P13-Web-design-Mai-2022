@@ -1,38 +1,86 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	articles-rechauffement-climatique-actu
+	{{ article.title }}
 {% endblock %}
 
 {% block header %}
-	articles-rechauffement-climatique-actu
+	{{ article.header }}
 {% endblock %}
 
 
 {% block body %}
-	{% for article in articles %}
-		<div class="col-md-12 blog-post" style='display:inline;margin-top:50px;'>
-			<div class="post-title" style='margin-top:10px'>
-				<h2>
-					<a href="{{ article.urlPath }}">{{ article.header }}</a>
-				</h2>
+	<style>
+		.image-gallery {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 20px;
+			width: 640px;
+			height: 300px;
+		}
 
-			</div>
+		.image-gallery div:nth-child(1) {
+			background-image: url("{{ asset('build/images/resized-imgs/catastrophes-rechauffement-climatique.png') }}");
 
-			<div class="post-info">
-				<span>Article du
-					{{ article.createdAt |format_datetime(locale='en') }}
-					écrit par
-					{{ article.authorName }}</span>
+			background-position: 0 0;
+		}
+
+		.image-gallery div:nth-child(2) {
+			background-image: url("{{ asset('build/images/resized-imgs/catastrophes-rechauffement-climatique.png') }}");
+			background-position: 200px 0;
+		}
+
+		.image-gallery div:nth-child(3) {
+			background-image: url("{{ asset('build/images/resized-imgs/catastrophes-rechauffement-climatique.png') }}");
+			background-position: 400px 0;
+
+		}
+	</style>
 
 
-			</div>
-			<p>{{ article.sumUp | raw }}</p>
-			<span style='display: flex;align-items: center;'>
-				lire:<a href="{{ article.urlPath }}" class="button button-style button-anim fa fa-long-arrow-right">{{ article.header }}</a>
-			</span>
+	<div
+		class="col-md-12 blog-post" style='display:block'>
+
+		<!-- Post Headline Start -->
+		<div class="post-title">
+			<h1>{{ article.header }}</h1>
 		</div>
-	{% endfor %}
+		<!-- Post Headline End -->
 
-{% endblock %}
+
+		<!-- Post Detail Start -->
+		<div class="post-info">
+			<span>Article du
+				{{ article.createdAt |format_datetime(locale='en') }}
+				écrit par
+				{{ article.authorName }}</span>
+		</div>
+		<!-- Post Detail End -->
+
+
+		<p>{{ article.content | raw}}</p>
+
+
+		<!-- Post Image Start -->
+		<div class="post-image margin-top-40 margin-bottom-40">
+
+			<img src="{{ asset('build/images/pattern-bg.3c10a35f.png') }}" alt="premiere image">
+
+
+			<p>Aidez nous à sauver notre chère planète.</p>
+		</div>
+		<!-- Post Image End -->
+
+		<!-- Post Image Gallery Start -->
+		<div class="image-gallery">
+			<div class="image-gallery-element"></div>
+			<div class="image-gallery-element"></div>
+			<div class="image-gallery-element"></div>
+		</div>
+		<!-- Post Image Gallery End -->
+
+	</div>
+	<!-- Post Author Bio Box ends -->
+
+</div>{% endblock %}
 

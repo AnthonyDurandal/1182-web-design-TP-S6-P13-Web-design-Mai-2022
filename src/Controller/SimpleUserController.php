@@ -39,13 +39,11 @@ class SimpleUserController extends AbstractController
         
         if(!$article)throw new Exception(sprintf('findOneByIdAndUrl returned null [id: %s, url:%s]', $id, $url));
         #config avec cache
-        /*
         $fileName = $this->creerFichierSiInexistant($article, $id);
         
         return $this->render($fileName);
-        */
         #sans cache client
-        return $this->render('simple_user/ficheArticle.html.twig', ['article' => $article]);
+        // return $this->render('simple_user/ficheArticle.html.twig', ['article' => $article]);
     }
 
     function creerFichierSiInexistant(Article $article,string|int $article_id)

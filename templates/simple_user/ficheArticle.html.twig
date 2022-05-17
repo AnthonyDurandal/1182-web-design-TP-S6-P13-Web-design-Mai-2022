@@ -16,7 +16,31 @@
 	.image-gallery {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		height: 100px;
+		grid-gap: 20px;  
+		width: 640px;
+		height: 300px;
+	}
+
+	.image-gallery div:nth-child(1){
+		background-image: url("{{ asset('build/images/resized-imgs/catastrophes-rechauffement-climatique.png') }}");
+
+			background-position: 0px 0px;
+	}
+
+	.image-gallery div:nth-child(2){
+		background-image: url("{{ asset('build/images/resized-imgs/catastrophes-rechauffement-climatique.png') }}");
+		background-position: 200px 0px;
+	}
+
+	.image-gallery div:nth-child(3){
+		background-image: url("{{ asset('build/images/resized-imgs/catastrophes-rechauffement-climatique.png') }}");
+		background-position: 400px 0px;
+	}
+
+	.gallery-container{
+		width:100%;
+		display:flex;
+		justify-content:center;
 	}
 </style>
 
@@ -51,55 +75,18 @@
 
 
 			<p>Aidez nous à sauver notre chère planète.</p>
-			<p></p>
 		</div>
 		<!-- Post Image End -->
 
 		<!-- Post Image Gallery Start -->
-		<div class="image-gallery">
-
-		
-			{# <div class=""> #}
-				<img src="{{ asset('build/images/template-imgs/ours-blanc-font-glacier-rechauffement-climatique.jpeg') }}" class="" alt="hausse-niveau-mer-rechauffement-climatique"/>
-			{# </div> #}
-
-			{# <div class=""> #}
-				<img src="{{ asset('build/images/template-imgs/cuit-rechauffement-climatique.png') }}" class="" alt="secheresse-rechauffement-climatique"/>
-			{# </div> #}
-
-			{# <div class=""> #}
-				<img src="{{ asset('build/images/template-imgs/canicule-rechauffement-climatique.jpg') }}" class="" alt="ours-polaire-fonte-glaciers"/>
-			{# </div> #}
-		</div>
-		<!-- Post Image Gallery End -->
-
-		<!-- You May Also Like Start -->
-		<div class="you-may-also-like margin-top-50 margin-bottom-50">
-			<h3>Ces articles peuvent aussi vous intéresser </h3>
-			<div class="row" style='display:grid;grid-template-columns:1fr 1fr 1fr;grid-gap:20px'>
-
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<a href="single.html">
-						<p>$related-1</p>
-					</a>
-				</div>
-
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<a href="single.html">
-						<p>$related-2</p>
-					</a>
-				</div>
-
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<a href="single.html">
-						<p>$related-3</p>
-					</a>
-				</div>
-
+		<div class="gallery-container">
+			<div class="image-gallery">
+				<div class="image-gallery-element"></div>
+				<div class="image-gallery-element"></div>
+				<div class="image-gallery-element"></div>
 			</div>
 		</div>
-		<!-- You May Also Like End -->
-
+		<!-- Post Image Gallery End -->
 	</div>
 	<!-- Post Author Bio Box ends -->
 
